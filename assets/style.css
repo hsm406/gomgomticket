@@ -164,8 +164,9 @@ nav.main-nav > ul > li > a[aria-current="page"] {
   .sub-menu { min-width: 130px; }
 }
 
-/* ===== 히어로 안내 섹션 (메인 페이지) ===== */
-main {
+/* ===== 히어로 안내 섹션 ===== */
+main,
+.hero-top-wrap {
   display: flex;
   justify-content: center;
 }
@@ -795,6 +796,91 @@ body { padding-bottom: 76px; }   /* 하단 고정 바에 콘텐츠가 가리지 
   font-weight: 800;
 }
 .faq-board__pager span.is-disabled { opacity: 0.4; }
+
+/* ===== 매입/판매 이용방법 3단계 안내 ===== */
+.buy-steps { margin-top: 40px; }
+.buy-steps__card {
+  background: linear-gradient(135deg, #FBF3E7 0%, #FFFDF9 45%, #F3E4CE 100%);
+  border: 1px solid var(--dg-line);
+  border-radius: 22px;
+  padding: 40px 28px;
+  box-shadow: 0 16px 36px rgba(58, 36, 15, 0.10);
+}
+.buy-steps__title {
+  text-align: center;
+  font-size: clamp(19px, 2.6vw, 24px);
+  font-weight: 800;
+  color: var(--dg-ink);
+  margin-bottom: 34px;
+}
+.buy-steps__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.buy-steps__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 190px;
+}
+.buy-steps__circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--dg-accent), var(--dg-accent-deep));
+  color: #fff;
+  font-size: 21px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  box-shadow: 0 10px 22px rgba(160, 90, 30, 0.28);
+}
+.buy-steps__item-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--dg-ink);
+  margin-bottom: 8px;
+}
+.buy-steps__item p {
+  font-size: 13px;
+  color: var(--dg-muted);
+  line-height: 1.6;
+}
+.buy-steps__arrow {
+  align-self: center;
+  color: var(--dg-cream);
+  font-size: 22px;
+  margin-top: 20px;
+}
+.buy-steps__tagline {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dg-ink);
+  margin-bottom: 18px;
+}
+.buy-steps__tagline strong { color: var(--dg-accent-deep); }
+.buy-steps__tags {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--dg-muted);
+  font-weight: 600;
+}
+@media (max-width: 640px) {
+  .buy-steps__card { padding: 32px 20px; }
+  .buy-steps__arrow { display: none; }
+  .buy-steps__item { width: 100%; }
+}
 
 /* ===== 회사소개 페이지 인트로 섹션 ===== */
 .page-content .about-intro__title {

@@ -46,6 +46,77 @@
     </nav>
   </header>
 
+  <div class="hero-top-wrap fade-in-section">
+    <div class="hero-split">
+    <div class="hero-guide-wrap">
+      <input type="checkbox" id="heroCallToggle" class="hero-call-toggle" aria-hidden="true" tabindex="-1">
+      <section class="hero-guide" id="hero-guide" aria-label="곰곰티켓 상담 안내">
+        <div class="hero-guide__inner">
+          <header class="hero-guide__head">
+            <p class="hero-guide__badge">곰곰티켓</p>
+            <span class="hero-guide__live">24시간 운영</span>
+          </header>
+          <div class="hero-guide__body">
+            <h1 class="hero-guide__title">
+              <span class="hero-guide__keyword">지류·모바일<br>상품권 매입</span>
+            </h1>
+            <p class="hero-guide__desc">
+              실시간 시세 적용 · 안전한 거래<br>
+              지금 바로 곰곰티켓에서
+            </p>
+            <ul class="hero-guide__chips" aria-label="서비스 특징">
+              <li class="hero-guide__chip">안전한 거래</li>
+              <li class="hero-guide__chip">실시간 시세</li>
+              <li class="hero-guide__chip hero-guide__chip--accent">빠른 매입</li>
+            </ul>
+          </div>
+          <div class="hero-guide__actions">
+            <a class="hero-guide__btn hero-guide__btn--primary consult-link" href="#" target="_blank" rel="noopener noreferrer">
+              상담 바로가기
+              <span class="hero-guide__arrow" aria-hidden="true">→</span>
+            </a>
+            <label for="heroCallToggle" class="hero-guide__btn hero-guide__btn--outline">전화 상담</label>
+          </div>
+        </div>
+      </section>
+      <div class="hero-call-modal__scrim" role="presentation">
+        <label for="heroCallToggle" class="hero-call-modal__dim" aria-label="닫기"></label>
+        <div class="hero-call-modal__box" role="dialog" aria-labelledby="heroCallTitle">
+          <label for="heroCallToggle" class="hero-call-modal__x" aria-label="닫기">×</label>
+          <p class="hero-call-modal__title" id="heroCallTitle">전화 상담</p>
+          <p class="hero-call-modal__desc">곰곰티켓 상담으로 바로 연결됩니다</p>
+          <div class="hero-call-modal__number-wrap">
+            <span class="hero-call-modal__hint">상담 번호</span>
+            <p class="hero-call-modal__number">010-2873-3857</p>
+          </div>
+          <div class="hero-call-modal__actions">
+            <a class="hero-call-modal__call" href="tel:01028733857">전화걸기</a>
+            <a class="hero-call-modal__sms" href="sms:01028733857">문자보내기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <img src="images/consultant.png" alt="곰곰티켓 상담 안내 이미지">
+    </div>
+    </div>
+  </div>
+
+  <!-- ===== 슬라이드 배너 (4:3, 좌측 자동 슬라이드, 대기 5초/전환 2초) ===== -->
+  <section class="banner-section fade-in-section" aria-label="이벤트 배너">
+    <div class="banner-slider">
+      <div class="banner-slider__track">
+        <div class="banner-slider__slide"><img src="images/banner1.jpg" alt="곰곰티켓 소개 배너"></div>
+        <div class="banner-slider__slide"><img src="images/banner2.jpg" alt="곰곰티켓 신뢰 배너"></div>
+        <div class="banner-slider__slide"><img src="images/banner3.jpg" alt="곰곰티켓 상담 안내 배너"></div>
+      </div>
+      <button type="button" class="banner-slider__btn banner-slider__btn--prev" aria-label="이전 배너">‹</button>
+      <button type="button" class="banner-slider__btn banner-slider__btn--next" aria-label="다음 배너">›</button>
+    </div>
+  </section>
+
+
   <main class="page-content-wrap">
     <div class="page-content fade-in-section">
       <p class="breadcrumb"><a href="index.html">곰곰티켓</a> &gt; <a href="faq-1.html">자주묻는질문</a> &gt; 지류상품권 진위확인</p>
@@ -167,6 +238,22 @@
     </div>
   </section>
 
+  <!-- ===== 갤러리 섹션 (gallery 폴더의 img1.jpg ~ img9.jpg를 3x3으로 배치) ===== -->
+  <section class="gp-gallery fade-in-section">
+    <div class="gp-gallery__grid">
+      <div class="gp-gallery__item"><img src="gallery/img1.jpg" alt="갤러리 이미지 1"></div>
+      <div class="gp-gallery__item"><img src="gallery/img2.jpg" alt="갤러리 이미지 2"></div>
+      <div class="gp-gallery__item"><img src="gallery/img3.jpg" alt="갤러리 이미지 3"></div>
+      <div class="gp-gallery__item"><img src="gallery/img4.jpg" alt="갤러리 이미지 4"></div>
+      <div class="gp-gallery__item"><img src="gallery/img5.jpg" alt="갤러리 이미지 5"></div>
+      <div class="gp-gallery__item"><img src="gallery/img6.jpg" alt="갤러리 이미지 6"></div>
+      <div class="gp-gallery__item"><img src="gallery/img7.jpg" alt="갤러리 이미지 7"></div>
+      <div class="gp-gallery__item"><img src="gallery/img8.jpg" alt="갤러리 이미지 8"></div>
+      <div class="gp-gallery__item"><img src="gallery/img9.jpg" alt="갤러리 이미지 9"></div>
+    </div>
+  </section>
+
+  <script src="assets/banner-slider.js"></script>
   <input type="checkbox" id="ffSmsToggle" class="hero-call-toggle" aria-hidden="true" tabindex="-1">
   <div class="ff-bar" role="navigation" aria-label="빠른 상담 바로가기">
     <a class="ff-btn ff-btn--call" href="tel:01028733857">

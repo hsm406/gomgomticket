@@ -46,18 +46,216 @@
     </nav>
   </header>
 
+  <div class="hero-top-wrap fade-in-section">
+    <div class="hero-split">
+    <div class="hero-guide-wrap">
+      <input type="checkbox" id="heroCallToggle" class="hero-call-toggle" aria-hidden="true" tabindex="-1">
+      <section class="hero-guide" id="hero-guide" aria-label="곰곰티켓 상담 안내">
+        <div class="hero-guide__inner">
+          <header class="hero-guide__head">
+            <p class="hero-guide__badge">곰곰티켓</p>
+            <span class="hero-guide__live">24시간 운영</span>
+          </header>
+          <div class="hero-guide__body">
+            <h1 class="hero-guide__title">
+              <span class="hero-guide__keyword">지류·모바일<br>상품권 매입</span>
+            </h1>
+            <p class="hero-guide__desc">
+              실시간 시세 적용 · 안전한 거래<br>
+              지금 바로 곰곰티켓에서
+            </p>
+            <ul class="hero-guide__chips" aria-label="서비스 특징">
+              <li class="hero-guide__chip">안전한 거래</li>
+              <li class="hero-guide__chip">실시간 시세</li>
+              <li class="hero-guide__chip hero-guide__chip--accent">빠른 매입</li>
+            </ul>
+          </div>
+          <div class="hero-guide__actions">
+            <a class="hero-guide__btn hero-guide__btn--primary consult-link" href="#" target="_blank" rel="noopener noreferrer">
+              상담 바로가기
+              <span class="hero-guide__arrow" aria-hidden="true">→</span>
+            </a>
+            <label for="heroCallToggle" class="hero-guide__btn hero-guide__btn--outline">전화 상담</label>
+          </div>
+        </div>
+      </section>
+      <div class="hero-call-modal__scrim" role="presentation">
+        <label for="heroCallToggle" class="hero-call-modal__dim" aria-label="닫기"></label>
+        <div class="hero-call-modal__box" role="dialog" aria-labelledby="heroCallTitle">
+          <label for="heroCallToggle" class="hero-call-modal__x" aria-label="닫기">×</label>
+          <p class="hero-call-modal__title" id="heroCallTitle">전화 상담</p>
+          <p class="hero-call-modal__desc">곰곰티켓 상담으로 바로 연결됩니다</p>
+          <div class="hero-call-modal__number-wrap">
+            <span class="hero-call-modal__hint">상담 번호</span>
+            <p class="hero-call-modal__number">010-2873-3857</p>
+          </div>
+          <div class="hero-call-modal__actions">
+            <a class="hero-call-modal__call" href="tel:01028733857">전화걸기</a>
+            <a class="hero-call-modal__sms" href="sms:01028733857">문자보내기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <img src="images/consultant.png" alt="곰곰티켓 상담 안내 이미지">
+    </div>
+    </div>
+  </div>
+
+  <!-- ===== 슬라이드 배너 (4:3, 좌측 자동 슬라이드, 대기 5초/전환 2초) ===== -->
+  <section class="banner-section fade-in-section" aria-label="이벤트 배너">
+    <div class="banner-slider">
+      <div class="banner-slider__track">
+        <div class="banner-slider__slide"><img src="images/banner1.jpg" alt="곰곰티켓 소개 배너"></div>
+        <div class="banner-slider__slide"><img src="images/banner2.jpg" alt="곰곰티켓 신뢰 배너"></div>
+        <div class="banner-slider__slide"><img src="images/banner3.jpg" alt="곰곰티켓 상담 안내 배너"></div>
+      </div>
+      <button type="button" class="banner-slider__btn banner-slider__btn--prev" aria-label="이전 배너">‹</button>
+      <button type="button" class="banner-slider__btn banner-slider__btn--next" aria-label="다음 배너">›</button>
+    </div>
+  </section>
+
+
   <main class="page-content-wrap">
     <div class="page-content fade-in-section">
       <p class="breadcrumb"><a href="index.html">곰곰티켓</a> &gt; 지류상품권 판매</p>
-      <h1>지류상품권 판매</h1>
-      <p class="page-lead">필요하신 지류상품권을 시세보다 합리적인 가격에 판매해드립니다.</p>
-      <h2>판매 가능 상품권</h2>
-      <ul class="hero-guide__chips" aria-label="판매 가능 상품권">
-        <li class="hero-guide__chip">백화점상품권</li>
-        <li class="hero-guide__chip">문화상품권</li>
-        <li class="hero-guide__chip hero-guide__chip--accent">기타 지류상품권</li>
-      </ul>
+      <h2>판매 절차</h2>
       <p>필요하신 상품권 종류와 금액을 상담을 통해 알려주시면 재고 확인 후 바로 안내해드립니다.</p>
+
+      <section class="buy-steps">
+        <div class="buy-steps__card">
+          <p class="buy-steps__title">상품권 판매 이용 방법</p>
+          <div class="buy-steps__row">
+            <div class="buy-steps__item">
+              <div class="buy-steps__circle">1</div>
+              <p class="buy-steps__item-title">상담 신청</p>
+              <p>전화 또는 문자 상담으로 구매를 원하시는 상품권 종류와 금액을 알려주세요.</p>
+            </div>
+            <div class="buy-steps__arrow" aria-hidden="true">→</div>
+            <div class="buy-steps__item">
+              <div class="buy-steps__circle">2</div>
+              <p class="buy-steps__item-title">재고·가격 확인</p>
+              <p>상담원이 실시간 재고와 판매 가격을 안내해드립니다.</p>
+            </div>
+            <div class="buy-steps__arrow" aria-hidden="true">→</div>
+            <div class="buy-steps__item">
+              <div class="buy-steps__circle">3</div>
+              <p class="buy-steps__item-title">안전한 전달</p>
+              <p>결제가 확인되면 안내해드린 방법으로 상품권을 빠르고 안전하게 전달해드립니다.</p>
+            </div>
+          </div>
+          <p class="buy-steps__tagline"><strong>간편한 절차로</strong> 누구나 쉽고 안전하게 이용 가능합니다!</p>
+          <div class="buy-steps__tags">
+            <span>⏱ 빠른 상담 처리</span>
+            <span>🔒 안전한 상품권 전달</span>
+            <span>💰 합리적인 판매 가격</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-board">
+        <p class="faq-board__title">상품권판매 FAQ</p>
+        <p class="faq-board__desc">지류상품권 판매 관련 자주 묻는 질문 · 24시간 상담 · 지금 바로 곰곰티켓에서 확인하세요</p>
+        <div class="faq-board__list">
+          <div class="faq-board__col-head">제목</div>
+          <div class="faq-board__row">
+            <button type="button" class="faq-board__q" aria-expanded="false">
+              <span>판매 상담은 어떻게 신청하나요?</span>
+              <span class="faq-board__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-board__a-wrap">
+              <div class="faq-board__a-inner">
+                <p class="faq-board__answer">전화 또는 문자 상담 버튼을 통해 원하시는 상품권 종류와 금액을 알려주시면 바로 안내해드립니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-board__row">
+            <button type="button" class="faq-board__q" aria-expanded="false">
+              <span>원하는 금액만큼 구매할 수 있나요?</span>
+              <span class="faq-board__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-board__a-wrap">
+              <div class="faq-board__a-inner">
+                <p class="faq-board__answer">재고 상황에 따라 원하시는 금액만큼 안내해드리고 있습니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-board__row">
+            <button type="button" class="faq-board__q" aria-expanded="false">
+              <span>판매 가격은 어떻게 책정되나요?</span>
+              <span class="faq-board__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-board__a-wrap">
+              <div class="faq-board__a-inner">
+                <p class="faq-board__answer">상담 시 실시간 판매 시세로 정확한 금액을 안내해드립니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-board__row">
+            <button type="button" class="faq-board__q" aria-expanded="false">
+              <span>결제는 어떤 방법으로 하나요?</span>
+              <span class="faq-board__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-board__a-wrap">
+              <div class="faq-board__a-inner">
+                <p class="faq-board__answer">안내해드리는 계좌로 결제하시면 바로 진행됩니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-board__row">
+            <button type="button" class="faq-board__q" aria-expanded="false">
+              <span>상품권은 어떻게 전달받나요?</span>
+              <span class="faq-board__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-board__a-wrap">
+              <div class="faq-board__a-inner">
+                <p class="faq-board__answer">결제 확인 후 안내해드린 방법으로 빠르고 안전하게 전달해드립니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-board__row">
+            <button type="button" class="faq-board__q" aria-expanded="false">
+              <span>구매 후 사용 전 문제가 있으면 어떻게 하나요?</span>
+              <span class="faq-board__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-board__a-wrap">
+              <div class="faq-board__a-inner">
+                <p class="faq-board__answer">상담 채널로 문의주시면 확인 후 안내해드립니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-board__row">
+            <button type="button" class="faq-board__q" aria-expanded="false">
+              <span>대량으로 구매할 수 있나요?</span>
+              <span class="faq-board__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-board__a-wrap">
+              <div class="faq-board__a-inner">
+                <p class="faq-board__answer">네, 대량 구매도 상담을 통해 진행 가능합니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-board__row">
+            <button type="button" class="faq-board__q" aria-expanded="false">
+              <span>구매 진행 상황은 어떻게 확인하나요?</span>
+              <span class="faq-board__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-board__a-wrap">
+              <div class="faq-board__a-inner">
+                <p class="faq-board__answer">상담 채널을 통해 진행 상황을 안내받으실 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="faq-board__pager">
+          <span class="is-disabled">&laquo;</span>
+          <span class="is-disabled">&lsaquo;</span>
+          <span class="is-active">1</span>
+          <span class="is-disabled">&rsaquo;</span>
+          <span class="is-disabled">&raquo;</span>
+        </div>
+      </section>
     </div>
   </main>
 
@@ -69,6 +267,22 @@
     </div>
   </section>
 
+  <!-- ===== 갤러리 섹션 (gallery 폴더의 img1.jpg ~ img9.jpg를 3x3으로 배치) ===== -->
+  <section class="gp-gallery fade-in-section">
+    <div class="gp-gallery__grid">
+      <div class="gp-gallery__item"><img src="gallery/img1.jpg" alt="갤러리 이미지 1"></div>
+      <div class="gp-gallery__item"><img src="gallery/img2.jpg" alt="갤러리 이미지 2"></div>
+      <div class="gp-gallery__item"><img src="gallery/img3.jpg" alt="갤러리 이미지 3"></div>
+      <div class="gp-gallery__item"><img src="gallery/img4.jpg" alt="갤러리 이미지 4"></div>
+      <div class="gp-gallery__item"><img src="gallery/img5.jpg" alt="갤러리 이미지 5"></div>
+      <div class="gp-gallery__item"><img src="gallery/img6.jpg" alt="갤러리 이미지 6"></div>
+      <div class="gp-gallery__item"><img src="gallery/img7.jpg" alt="갤러리 이미지 7"></div>
+      <div class="gp-gallery__item"><img src="gallery/img8.jpg" alt="갤러리 이미지 8"></div>
+      <div class="gp-gallery__item"><img src="gallery/img9.jpg" alt="갤러리 이미지 9"></div>
+    </div>
+  </section>
+
+  <script src="assets/banner-slider.js"></script>
   <input type="checkbox" id="ffSmsToggle" class="hero-call-toggle" aria-hidden="true" tabindex="-1">
   <div class="ff-bar" role="navigation" aria-label="빠른 상담 바로가기">
     <a class="ff-btn ff-btn--call" href="tel:01028733857">
@@ -106,5 +320,6 @@
     </div>
   </div>
   <script src="assets/fade-in.js"></script>
+  <script src="assets/faq-accordion.js"></script>
 </body>
 </html>
