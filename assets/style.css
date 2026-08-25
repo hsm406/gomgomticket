@@ -320,6 +320,79 @@ main {
   .hero-guide__btn { width: 100%; }
 }
 
+/* ===== 히어로 아래 슬라이드 배너 ===== */
+.banner-section {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px 70px;
+}
+
+.banner-slider {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 1439 / 535;   /* 보내주신 배너 이미지 비율에 맞춤 */
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(90, 58, 26, 0.18);
+  background: #f0e6d8;
+}
+
+.banner-slider__track {
+  display: flex;
+  height: 100%;
+  transition: transform 2s ease;   /* 넘어가는 시간 2초 */
+}
+
+.banner-slider__track.no-transition {
+  transition: none;
+}
+
+.banner-slider__slide {
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+.banner-slider__slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-slider__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--dg-brown-deep);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(58, 36, 15, 0.2);
+  transition: background 0.15s ease;
+  z-index: 5;
+}
+
+.banner-slider__btn:hover {
+  background: #ffffff;
+}
+
+.banner-slider__btn--prev { left: 14px; }
+.banner-slider__btn--next { right: 14px; }
+
+@media (max-width: 500px) {
+  .banner-slider__btn { width: 34px; height: 34px; font-size: 16px; }
+}
+
 /* ===== 하위 페이지 공통 콘텐츠 영역 ===== */
 .page-content-wrap {
   display: flex;

@@ -113,5 +113,20 @@
     </div>
   </main>
 
+  <!-- ===== 슬라이드 배너 (4:3, 좌측 자동 슬라이드, 대기 5초/전환 2초) ===== -->
+  <section class="banner-section" aria-label="이벤트 배너">
+    <div class="banner-slider">
+      <div class="banner-slider__track">
+        <!-- 배너 이미지는 4:3 비율로 준비해서 경로만 바꿔주세요 (예: images/banner1.jpg) -->
+        <div class="banner-slider__slide"><img src="images/banner1.jpg" alt="배너 1"></div>
+        <div class="banner-slider__slide"><img src="images/banner2.jpg" alt="배너 2"></div>
+        <div class="banner-slider__slide"><img src="images/banner3.jpg" alt="배너 3"></div>
+      </div>
+      <button type="button" class="banner-slider__btn banner-slider__btn--prev" aria-label="이전 배너">‹</button>
+      <button type="button" class="banner-slider__btn banner-slider__btn--next" aria-label="다음 배너">›</button>
+    </div>
+  </section>
+
+  <script src="assets/banner-slider.js"></script>
 </body>
 </html>
