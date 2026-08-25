@@ -393,6 +393,61 @@ main {
   .banner-slider__btn { width: 34px; height: 34px; font-size: 16px; }
 }
 
+/* ===== 곰곰티켓 장점 섹션 ===== */
+.gp-adv {
+  box-sizing: border-box;
+  max-width: 1200px; margin: 0 auto;
+  padding: 56px 24px 64px;
+  background: linear-gradient(160deg, #FBF3E7 0%, #FFFDF9 45%, #F3E4CE 100%);
+  border-radius: 32px;
+}
+.gp-adv *, .gp-adv *::before, .gp-adv *::after { box-sizing: border-box; }
+.gp-adv__title {
+  margin: 0 0 40px; text-align: center;
+  font-size: clamp(22px, 3vw, 30px); font-weight: 900; letter-spacing: -0.01em;
+  background: linear-gradient(120deg, var(--dg-accent) 0%, var(--dg-brown-deep) 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.gp-adv__grid {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
+}
+.gp-adv__card {
+  flex: 1 1 300px; max-width: 320px;
+  background: linear-gradient(160deg, #FFFFFF 0%, #FFFBF5 100%);
+  border: 1px solid rgba(138, 90, 46, 0.16);
+  border-radius: 20px; padding: 26px 24px;
+  box-shadow: 0 10px 26px rgba(58, 36, 15, 0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.gp-adv__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(58, 36, 15, 0.14);
+}
+.gp-adv__icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; border-radius: 14px;
+  font-size: 22px; margin-bottom: 14px;
+  box-shadow: 0 8px 16px rgba(58, 36, 15, 0.14);
+}
+.gp-adv__icon--amber  { background: linear-gradient(135deg, #F3D9A8, #D9A86C); }
+.gp-adv__icon--brown  { background: linear-gradient(135deg, #B08454, #8A5A2E); }
+.gp-adv__icon--copper { background: linear-gradient(135deg, #D9A86C, #A35F2C); }
+.gp-adv__icon--tan    { background: linear-gradient(135deg, #E4C89A, #C07F4A); }
+.gp-adv__icon--deep   { background: linear-gradient(135deg, var(--dg-accent), var(--dg-brown-deep)); }
+.gp-adv__card-title {
+  margin: 0 0 10px; font-size: 17px; font-weight: 800; color: var(--dg-ink);
+  letter-spacing: -0.01em;
+}
+.gp-adv__desc {
+  margin: 0; font-size: 14px; line-height: 1.65; font-weight: 500;
+  color: var(--dg-muted);
+}
+.gp-adv__desc strong { color: var(--dg-accent-deep); font-weight: 800; }
+@media (max-width: 640px) {
+  .gp-adv { padding: 44px 18px 52px; border-radius: 22px; }
+  .gp-adv__card { flex: 1 1 100%; max-width: 100%; }
+}
+
 /* ===== 하위 페이지 공통 콘텐츠 영역 ===== */
 .page-content-wrap {
   display: flex;
