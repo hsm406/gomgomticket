@@ -488,6 +488,61 @@ main {
   .gp-gallery__grid { gap: 2px; }
 }
 
+/* ===== 하단 고정 빠른상담 바 ===== */
+body { padding-bottom: 76px; }   /* 하단 고정 바에 콘텐츠가 가리지 않도록 */
+
+.ff-bar {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  z-index: 500;
+  display: flex; align-items: stretch; gap: 8px;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: rgba(255, 253, 249, 0.94);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(138, 90, 46, 0.18);
+  box-shadow: 0 -8px 28px rgba(58, 36, 15, 0.14);
+}
+.ff-btn {
+  flex: 1 1 0;
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  height: 52px; border-radius: 16px;
+  font-size: 14px; font-weight: 800; letter-spacing: -0.01em;
+  text-decoration: none; cursor: pointer;
+  box-sizing: border-box; -webkit-tap-highlight-color: transparent;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
+}
+.ff-btn:hover, .ff-btn:focus-visible { transform: translateY(-2px); }
+.ff-btn__icon { display: inline-flex; line-height: 0; }
+.ff-btn__label { white-space: nowrap; }
+.ff-btn--call,
+.ff-btn--call:link, .ff-btn--call:visited,
+.ff-btn--call:hover, .ff-btn--call:focus, .ff-btn--call:active {
+  background: linear-gradient(135deg, var(--dg-accent) 0%, var(--dg-brown-deep) 100%);
+  color: #FFF9F2 !important; -webkit-text-fill-color: #FFF9F2;
+  box-shadow: 0 8px 18px rgba(90, 58, 26, 0.32);
+}
+.ff-btn--call:hover, .ff-btn--call:focus-visible {
+  box-shadow: 0 12px 24px rgba(90, 58, 26, 0.42);
+}
+.ff-btn--sms,
+.ff-btn--sms:link, .ff-btn--sms:visited,
+.ff-btn--sms:hover, .ff-btn--sms:focus, .ff-btn--sms:active {
+  background: #FBF3E7;
+  border: 1.5px solid var(--dg-cream);
+  color: var(--dg-ink) !important; -webkit-text-fill-color: var(--dg-ink);
+}
+.ff-btn--sms:hover, .ff-btn--sms:focus-visible {
+  background: #F3E4CE;
+  box-shadow: 0 8px 18px rgba(138, 90, 46, 0.18);
+}
+@media (max-width: 380px) {
+  .ff-btn { font-size: 13px; gap: 4px; }
+  .ff-btn__icon svg { width: 18px; height: 18px; }
+}
+@media (min-width: 720px) {
+  .ff-bar { justify-content: center; padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)); }
+  .ff-btn { flex: 0 0 220px; height: 56px; font-size: 15px; }
+}
+
 /* ===== 하위 페이지 공통 콘텐츠 영역 ===== */
 .page-content-wrap {
   display: flex;

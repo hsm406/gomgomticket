@@ -194,5 +194,41 @@
   </section>
 
   <script src="assets/banner-slider.js"></script>
+  <input type="checkbox" id="ffSmsToggle" class="hero-call-toggle" aria-hidden="true" tabindex="-1">
+  <div class="ff-bar" role="navigation" aria-label="빠른 상담 바로가기">
+    <a class="ff-btn ff-btn--call" href="tel:01028733857">
+      <span class="ff-btn__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+          <path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.6c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="ff-btn__label">전화상담</span>
+    </a>
+    <label for="ffSmsToggle" class="ff-btn ff-btn--sms">
+      <span class="ff-btn__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+          <rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="currentColor"/>
+          <path d="M4 6.5l8 6.2 8-6.2" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="ff-btn__label">문자상담</span>
+    </label>
+  </div>
+  <div class="hero-call-modal__scrim" role="presentation">
+    <label for="ffSmsToggle" class="hero-call-modal__dim" aria-label="닫기"></label>
+    <div class="hero-call-modal__box" role="dialog" aria-labelledby="ffSmsTitle">
+      <label for="ffSmsToggle" class="hero-call-modal__x" aria-label="닫기">×</label>
+      <p class="hero-call-modal__title" id="ffSmsTitle">문자상담</p>
+      <p class="hero-call-modal__desc">곰곰티켓 상담으로 바로 연결됩니다</p>
+      <div class="hero-call-modal__number-wrap">
+        <span class="hero-call-modal__hint">상담 번호</span>
+        <p class="hero-call-modal__number">010-2873-3857</p>
+      </div>
+      <div class="hero-call-modal__actions">
+        <a class="hero-call-modal__call" href="tel:01028733857">전화걸기</a>
+        <a class="hero-call-modal__sms" href="sms:01028733857">문자보내기</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
