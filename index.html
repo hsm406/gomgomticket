@@ -4,10 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>곰곰티켓</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; background: #f5f5f7; }
+  @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Pretendard:wght@400;600;700;800;900&display=swap');
 
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Pretendard", "Noto Sans KR", -apple-system, sans-serif;
+    background: #f5f5f7;
+  }
+
+  /* ===== 헤더 ===== */
   .site-header {
     display: flex;
     align-items: center;
@@ -24,15 +31,27 @@
     text-decoration: none;
   }
 
+  /* 로고 아이콘: 이미지 파일을 쓸 경우 이 박스 안의 <img> 태그를 사용하세요.
+     - src 경로를 실제 로고 이미지 파일 경로로 바꿔주세요 (예: images/logo.png)
+     - 이미지가 없다면 아래 .logo-icon 안의 img 태그를 지우고
+       텍스트나 이모지(예: 🐻)를 그대로 넣어도 됩니다. */
   .logo-icon {
     width: 42px;
     height: 42px;
     border-radius: 10px;
+    overflow: hidden;
     background: linear-gradient(135deg, #d9a86c, #c07f4a);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 22px;
+  }
+
+  .logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* 이미지가 박스를 꽉 채우도록 */
+    display: block;
   }
 
   .logo-text {
@@ -75,10 +94,200 @@
     nav.main-nav a { font-size: 13px; }
     .logo-text { font-size: 17px; }
   }
+
+  /* ===== 히어로 안내 섹션 ===== */
+  main {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* ===== 히어로 2단 배치(카드 + 사진) ===== */
+  .hero-split {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    padding: 40px 20px;
+  }
+
+  .hero-photo {
+    flex: 0 1 320px;
+    aspect-ratio: 3 / 4;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(90, 58, 26, 0.18);
+  }
+
+  .hero-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 860px) {
+    .hero-split { flex-direction: column-reverse; }
+    .hero-photo { flex-basis: auto; max-width: 280px; }
+  }
+
+  .hero-guide-wrap, .hero-guide {
+    --dg-ink: #3B2415; --dg-ink-soft: #7A5A3A; --dg-brown: #8A5A2E;
+    --dg-brown-deep: #5C3A1A; --dg-accent: #C07F4A; --dg-accent-deep: #A35F2C;
+    --dg-cream: #D9A86C; --dg-cream-light: #FFF6EC; --dg-cream-deep: #8A5A2E;
+    --dg-muted: #8A745C;
+    --dg-line: rgba(138, 90, 46, 0.25);
+    max-width: 620px; padding: 0;
+    font-family: "Pretendard", "Noto Sans KR", -apple-system, sans-serif;
+    background: transparent;
+  }
+  .hero-call-toggle {
+    position: absolute; width: 1px; height: 1px; margin: -1px;
+    padding: 0; border: 0; opacity: 0; overflow: hidden;
+    clip: rect(0,0,0,0); pointer-events: none;
+  }
+  .hero-guide {
+    display: block; border-radius: 28px; padding: 40px 32px;
+    background: linear-gradient(135deg, #FBF3E7 0%, #FFFDF9 45%, #F3E4CE 100%);
+    border: 1px solid rgba(138,90,46,0.18);
+    box-shadow: 0 20px 48px rgba(58,36,15,0.14), inset 0 1px 0 rgba(255,255,255,0.8);
+  }
+  .hero-guide__inner { display: grid; grid-template-columns: 1fr; gap: 28px; }
+  .hero-guide__head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .hero-guide__badge {
+    margin: 0; padding: 7px 16px; border-radius: 999px;
+    background: linear-gradient(155deg, var(--dg-brown) 0%, var(--dg-brown-deep) 100%);
+    color: var(--dg-cream-light); font-size: 13px; font-weight: 700;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif; letter-spacing: 0.01em;
+    border: 1px solid rgba(255,255,255,0.35);
+    box-shadow: 0 6px 16px rgba(90,58,26,0.28);
+  }
+  .hero-guide__live {
+    padding: 5px 12px; border-radius: 8px;
+    background: rgba(138,90,46,0.08); color: var(--dg-accent-deep);
+    border: 1px solid rgba(138,90,46,0.3);
+    font-size: 12px; font-weight: 800;
+  }
+  .hero-guide__body { display: flex; flex-direction: column; gap: 18px; }
+  .hero-guide__title { margin: 0; }
+  .hero-guide__keyword {
+    display: block; font-size: clamp(22px, 3.9vw, 39px); font-weight: 700;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    line-height: 1.2; letter-spacing: 0.01em;
+    background: linear-gradient(135deg, var(--dg-cream-deep) 0%, var(--dg-accent) 60%, var(--dg-accent-deep) 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    text-shadow: 0 1px 2px rgba(58,36,15,0.08);
+  }
+  .hero-guide__desc {
+    margin: 0; font-size: clamp(17px, 2.4vw, 22px); font-weight: 700;
+    line-height: 1.6; color: var(--dg-ink-soft);
+  }
+  .hero-guide__chips { margin: 6px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+  .hero-guide__chip {
+    padding: 10px 16px; border-radius: 999px; border: 1px solid var(--dg-line);
+    background: rgba(138,90,46,0.06);
+    color: var(--dg-muted); font-size: 14px; font-weight: 700;
+  }
+  .hero-guide__chip--accent {
+    border-color: rgba(138,90,46,0.4); color: var(--dg-accent-deep);
+    background: rgba(138,90,46,0.1);
+  }
+  .hero-guide__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .hero-guide__btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 17px 26px; border-radius: 14px; font-size: 17px; font-weight: 800;
+    text-decoration: none; cursor: pointer; box-sizing: border-box;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .hero-guide__btn:hover, .hero-guide__btn:focus-visible {
+    transform: scale(1.045);
+  }
+  .hero-guide__btn--primary,
+  .hero-guide__btn--primary:link,
+  .hero-guide__btn--primary:visited,
+  .hero-guide__btn--primary:hover,
+  .hero-guide__btn--primary:focus,
+  .hero-guide__btn--primary:active {
+    border: 1px solid rgba(138,90,46,0.4);
+    background: linear-gradient(135deg, var(--dg-accent), var(--dg-accent-deep));
+    color: #FFF9F2 !important; box-shadow: 0 10px 24px rgba(90,58,26,0.35);
+    -webkit-text-fill-color: #FFF9F2;
+  }
+  .hero-guide__btn--outline,
+  .hero-guide__btn--outline:link,
+  .hero-guide__btn--outline:visited,
+  .hero-guide__btn--outline:hover,
+  .hero-guide__btn--outline:focus,
+  .hero-guide__btn--outline:active {
+    border: 2px solid var(--dg-accent); background: rgba(138,90,46,0.05);
+    color: var(--dg-accent-deep) !important;
+    -webkit-text-fill-color: var(--dg-accent-deep);
+  }
+  .hero-guide__btn--primary:hover, .hero-guide__btn--primary:focus-visible {
+    box-shadow: 0 14px 30px rgba(90,58,26,0.45);
+  }
+  .hero-call-modal__scrim {
+    display: none; position: fixed; inset: 0; z-index: 2147483646;
+    align-items: center; justify-content: center; padding: 20px;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  }
+  .hero-call-toggle:checked ~ .hero-call-modal__scrim { display: flex !important; }
+  .hero-call-modal__dim {
+    position: absolute; inset: 0; background: transparent;
+    backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); cursor: pointer;
+  }
+  .hero-call-modal__box {
+    position: relative; width: min(100%, 360px); padding: 28px 24px 20px;
+    border-radius: 22px; background: #FFFFFF;
+    border: 1px solid rgba(138,90,46,0.25);
+    box-shadow: 0 24px 60px rgba(58,36,15,0.22); text-align: center; z-index: 1;
+  }
+  .hero-call-modal__x {
+    position: absolute; top: 14px; right: 14px; width: 32px; height: 32px;
+    border-radius: 10px; background: rgba(138,90,46,0.1); color: var(--dg-accent-deep);
+    font-size: 20px; line-height: 32px; text-align: center; cursor: pointer;
+  }
+  .hero-call-modal__title {
+    margin: 0; font-size: 18px; font-weight: 900; color: var(--dg-ink);
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  }
+  .hero-call-modal__desc { margin: 6px 0 0; font-size: 13px; font-weight: 600; color: var(--dg-muted); }
+  .hero-call-modal__number-wrap {
+    margin: 20px 0 16px; padding: 16px; border-radius: 14px;
+    background: rgba(138,90,46,0.07); border: 1px solid rgba(138,90,46,0.25);
+  }
+  .hero-call-modal__hint { display: block; font-size: 12px; font-weight: 700; color: var(--dg-accent-deep); margin-bottom: 6px; }
+  .hero-call-modal__number {
+    margin: 0; font-size: 28px; font-weight: 900; color: var(--dg-ink);
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  }
+  .hero-call-modal__actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 0; }
+  .hero-call-modal__call, .hero-call-modal__sms {
+    display: flex; align-items: center; justify-content: center;
+    padding: 12px; border-radius: 12px; font-size: 14px; font-weight: 800; text-decoration: none;
+  }
+  .hero-call-modal__call {
+    background: linear-gradient(135deg, var(--dg-accent), var(--dg-accent-deep));
+    color: #FFF9F2; border: 1px solid rgba(138,90,46,0.4);
+  }
+  .hero-call-modal__sms { background: transparent; border: 1px solid rgba(138,90,46,0.3); color: var(--dg-accent-deep); }
+  @media (min-width: 720px) {
+    .hero-guide__inner { grid-template-columns: 1fr auto; grid-template-rows: auto 1fr; gap: 20px 40px; }
+    .hero-guide__head { grid-column: 1 / -1; }
+    .hero-guide__body { grid-column: 1; }
+    .hero-guide__actions { grid-column: 2; grid-row: 2; flex-direction: column; min-width: 220px; align-self: center; }
+    .hero-guide__btn { width: 100%; }
+  }
+  @media (max-width: 719px) {
+    .hero-guide__actions { flex-direction: column; align-items: stretch; }
+    .hero-guide__btn { width: 100%; }
+  }
 </style>
 </head>
 <body>
 
+  <!-- ===== 헤더 ===== -->
   <header class="site-header">
     <a href="#" class="logo">
       <div class="logo-icon">🐻</div>
@@ -97,6 +306,64 @@
       </ul>
     </nav>
   </header>
+
+  <!-- ===== 히어로 안내 섹션 ===== -->
+  <main>
+    <div class="hero-split">
+    <div class="hero-guide-wrap">
+      <input type="checkbox" id="heroCallToggle" class="hero-call-toggle" aria-hidden="true" tabindex="-1">
+      <section class="hero-guide" id="hero-guide" aria-label="곰곰티켓 상담 안내">
+        <div class="hero-guide__inner">
+          <header class="hero-guide__head">
+            <p class="hero-guide__badge">곰곰티켓</p>
+            <span class="hero-guide__live">24시간 운영</span>
+          </header>
+          <div class="hero-guide__body">
+            <h1 class="hero-guide__title">
+              <span class="hero-guide__keyword">지류·모바일<br>상품권 매입</span>
+            </h1>
+            <p class="hero-guide__desc">
+              실시간 시세 적용 · 안전한 거래<br>
+              지금 바로 곰곰티켓에서
+            </p>
+            <ul class="hero-guide__chips" aria-label="서비스 특징">
+              <li class="hero-guide__chip">안전한 거래</li>
+              <li class="hero-guide__chip">실시간 시세</li>
+              <li class="hero-guide__chip hero-guide__chip--accent">빠른 매입</li>
+            </ul>
+          </div>
+          <div class="hero-guide__actions">
+            <a class="hero-guide__btn hero-guide__btn--primary" href="#" target="_blank" rel="noopener noreferrer">
+              상담 바로가기
+              <span class="hero-guide__arrow" aria-hidden="true">→</span>
+            </a>
+            <label for="heroCallToggle" class="hero-guide__btn hero-guide__btn--outline">전화 상담</label>
+          </div>
+        </div>
+      </section>
+      <div class="hero-call-modal__scrim" role="presentation">
+        <label for="heroCallToggle" class="hero-call-modal__dim" aria-label="닫기"></label>
+        <div class="hero-call-modal__box" role="dialog" aria-labelledby="heroCallTitle">
+          <label for="heroCallToggle" class="hero-call-modal__x" aria-label="닫기">×</label>
+          <p class="hero-call-modal__title" id="heroCallTitle">전화 상담</p>
+          <p class="hero-call-modal__desc">곰곰티켓 상담으로 바로 연결됩니다</p>
+          <div class="hero-call-modal__number-wrap">
+            <span class="hero-call-modal__hint">상담 번호</span>
+            <p class="hero-call-modal__number">010-2873-3857</p>
+          </div>
+          <div class="hero-call-modal__actions">
+            <a class="hero-call-modal__call" href="tel:01028733857">전화걸기</a>
+            <a class="hero-call-modal__sms" href="sms:01028733857">문자보내기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <img src="images/consultant.png" alt="곰곰티켓 상담 안내 이미지">
+    </div>
+    </div>
+  </main>
 
 </body>
 </html>
