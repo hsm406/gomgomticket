@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>상품권 매입/판매 헤더</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; background: #f5f5f7; }
+
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    background: #ffffff;
+    border-bottom: 1px solid #eee;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #6c3ce9, #8b5cf6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+    font-weight: 800;
+    color: #5b2ad6;
+    letter-spacing: -0.5px;
+  }
+
+  .logo-text .sub {
+    display: block;
+    font-size: 10px;
+    font-weight: 500;
+    color: #999;
+    letter-spacing: 1px;
+  }
+
+  nav.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 36px;
+  }
+
+  nav.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: color 0.15s ease;
+  }
+
+  nav.main-nav a:hover {
+    color: #6c3ce9;
+  }
+
+  @media (max-width: 720px) {
+    .site-header { padding: 14px 20px; }
+    nav.main-nav ul { gap: 16px; }
+    nav.main-nav a { font-size: 13px; }
+    .logo-text { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="#" class="logo">
+      <div class="logo-icon">GC</div>
+      <div class="logo-text">
+        상품권매입센터
+        <span class="sub">GIFT CARD EXCHANGE</span>
+      </div>
+    </a>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#">지류상품권 매입</a></li>
+        <li><a href="#">모바일상품권 매입</a></li>
+        <li><a href="#">상품권 판매</a></li>
+        <li><a href="#">이용안내</a></li>
+      </ul>
+    </nav>
+  </header>
+
+</body>
+</html>
